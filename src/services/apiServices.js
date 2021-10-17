@@ -4,7 +4,6 @@ export function getData(
   query,
   setAuthors,
   setTitles,
-  setLinks,
   setRating,
   setImages,
   setPageCount,
@@ -23,11 +22,6 @@ export function getData(
 
       const tempTitles = response.data.items.map((obj) => obj.volumeInfo.title);
       setTitles(tempTitles);
-
-      const tempLinks = response.data.items.map(
-        (obj) => obj.volumeInfo.canonicalVolumeLink
-      );
-      setLinks(tempLinks);
 
       const tempRatings = response.data.items.map(
         (obj) => obj.volumeInfo.averageRating
@@ -53,6 +47,37 @@ export function getData(
         (obj) => obj.volumeInfo.publisher
       );
       setPublishers(tempPublisher);
+    })
+    .catch((reason) => console.log(reason));
+}
+
+export function getSingleBook(
+  query,
+  setImage,
+  setTitle,
+  setAuthor,
+  setPageCount,
+  setLink
+) {
+  const URL = `https://www.googleapis.com/books/v1/volumes?q=${query}`;
+
+  axios
+    .get(URL)
+    .then((response) => {
+      const tempAuthor = response.data.items[0].volumeInfo.authors.toString();
+      setAuthor(tempAuthor);
+
+      const tempImage = response.data.items[0].volumeInfo.imageLinks.thumbnail;
+      setImage(tempImage);
+
+      const tempTitle = response.data.items[0].volumeInfo.title;
+      setTitle(tempTitle);
+
+      const tempPageCount = response.data.items[0].volumeInfo.pageCount;
+      setPageCount(tempPageCount);
+
+      const tempLink = response.data.items[0].volumeInfo.canonicalVolumeLink;
+      setLink(tempLink);
     })
     .catch((reason) => console.log(reason));
 }

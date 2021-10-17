@@ -12,8 +12,6 @@ export default function Results({ query }) {
   const [rating, setRating] = useState([]);
   const [ratingsCount, setRatingsCount] = useState([]);
 
-  const [links, setLinks] = useState([]);
-
   useEffect(() => {
     if (query === "") return;
 
@@ -21,7 +19,6 @@ export default function Results({ query }) {
       query,
       setAuthors,
       setTitles,
-      setLinks,
       setRating,
       setImages,
       setPageCount,
@@ -42,7 +39,6 @@ export default function Results({ query }) {
             pageCount={pageCount[index]}
             rating={rating[index]}
             ratingsCount={ratingsCount[index]}
-            links={links[index]}
             key={index}
           />
         );

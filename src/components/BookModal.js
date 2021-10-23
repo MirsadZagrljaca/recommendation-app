@@ -12,8 +12,8 @@ export default function BookModal({
   const modalStyle = {
     content: {
       position: "absolute",
-      top: "45%",
-      left: "45%",
+      top: "15%",
+      left: "15%",
       textAlign: "center",
       border: "1px solid black",
       margin: "15px",

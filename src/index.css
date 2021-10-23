@@ -118,7 +118,7 @@ img {
   margin-right: 25px;
   width: 97.75vw;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   border: 1px solid #1abc9c;
   font-size: 1.5rem;
   display: flex;
@@ -184,4 +184,177 @@ a:hover {
   border-radius: 2.5px;
   color: #1abc9c;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .results {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .single-result {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .results {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .single-result {
+    margin-left: 30px;
+  }
+
+  .ui input {
+    width: 90.5vw;
+  }
+
+  .msg-box-filled {
+    width: 96.3vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .results {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .single-result {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body,
+  * {
+    font-size: 15px;
+  }
+
+  .results {
+    grid-template-columns: 1fr;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 93vw;
+  }
+
+  .single-result {
+    width: 100%;
+    margin: 0px;
+  }
+
+  img {
+    width: 150px;
+    height: 100px;
+  }
+
+  .single-result-title {
+    font-size: 20px;
+  }
+
+  .single-result-author {
+    font-size: 15px;
+  }
+
+  .ui input {
+    width: 84vw;
+  }
+
+  .ui button {
+    width: 1vw !important;
+    text-align: center;
+  }
+
+  .msg-box-filled {
+    width: 93.5vw;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body,
+  * {
+    font-size: 15px;
+  }
+
+  .results {
+    grid-template-columns: 1fr;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 92vw;
+  }
+
+  .single-result {
+    width: 100%;
+    margin: 0px;
+  }
+
+  img {
+    width: 150px;
+    height: 100px;
+  }
+
+  .single-result-title {
+    font-size: 20px;
+  }
+
+  .single-result-author {
+    font-size: 15px;
+  }
+
+  .ui input {
+    width: 81vw;
+  }
+
+  .ui button {
+    width: 0.5vw !important;
+    text-align: center;
+  }
+
+  .msg-box-filled {
+    width: 92vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body,
+  * {
+    font-size: 15px;
+  }
+
+  .results {
+    grid-template-columns: 1fr;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 91vw;
+  }
+
+  .single-result {
+    width: 100%;
+    margin: 0px;
+  }
+
+  img {
+    width: 150px;
+    height: 100px;
+  }
+
+  .single-result-title {
+    font-size: 20px;
+  }
+
+  .single-result-author {
+    font-size: 15px;
+  }
+
+  .ui input {
+    width: 78vw;
+  }
+
+  .ui button {
+    width: 0.5vw !important;
+    text-align: center;
+  }
+
+  .msg-box-filled {
+    width: 91vw;
+  }
 }

@@ -9,11 +9,12 @@ export default function SingleBook({
   pageCount,
   rating,
   ratingsCount,
+  index,
 }) {
   const [hover, setHover] = useState(false);
 
   return (
-    <div className="single-result">
+    <div className={"single-result " + index}>
       <img src={images} alt="Book" />
       <p className="single-result-title">{titles}</p>
       <p className="single-result-author">{authors}</p>
@@ -21,6 +22,7 @@ export default function SingleBook({
         className="details-button"
         onPointerEnter={(e) => setHover(true)}
         onPointerLeave={(e) => setHover(false)}
+        onClick={(e) => setHover(!hover)}
         data-for="hover"
         data-tip="Hello<br />multiline<br />tooltip"
         data-iscapture="true"

@@ -40,6 +40,7 @@ export default function Results({ query }) {
             rating={rating[index]}
             ratingsCount={ratingsCount[index]}
             key={index}
+            index={index}
           />
         );
       })}
